@@ -18,7 +18,11 @@ class PostController < ApplicationController
         if @post.valid?
             redirect_to posts_path
         else
+     
             redirect_to new_post_path
+            flash.alert = "not valid input"
+     
+        
         end
     end
 
@@ -30,7 +34,7 @@ class PostController < ApplicationController
             redirect_to post_path(@post)
         end
     end
-
+    
     def edit
         @post = Post.find(params[:id])
        
