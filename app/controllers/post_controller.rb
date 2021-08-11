@@ -1,7 +1,7 @@
 class PostController < ApplicationController
 
     def home
-    render 'post.html.erb'
+    
     end
 
 
