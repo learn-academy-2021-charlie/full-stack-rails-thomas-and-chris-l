@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get '/' => 'post#home'
-  root 'post#home'
+  get '/' => 'post#index'
+  root 'post#index'
 
   get '/posts' => 'post#index'
   
