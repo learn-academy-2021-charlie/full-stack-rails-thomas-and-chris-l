@@ -1,5 +1,5 @@
 <h3>Add a New Blog Post</h3>
-<%= form_with url: '/post', local: true do |form| %>
+<%= form_with model: @post, local: true do |form| %>
 
   <%= form.label :title %>
   <%= form.text_field :title %>
@@ -12,4 +12,4 @@
   <%= form.submit 'Add Post' %>
 <% end %>
 
-<%= link_to 'Home', "/" %>
+<%= link_to 'Home', posts_path %>

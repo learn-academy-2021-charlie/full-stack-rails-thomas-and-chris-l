@@ -1,11 +1,11 @@
 <h1> Welcome to our Blog!s </h1>
 
 <ul>
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
     <li>
     <%= link_to post.title, "/post/#{post.id}" %>
     </li>
-    <% end%>
+    <% end %>
 </ul>
 
-<h4> <%= link_to "New Blog", "/post/new" %> </h4>
+<h4> <%= link_to "New Blog", new_post_path %> </h4>

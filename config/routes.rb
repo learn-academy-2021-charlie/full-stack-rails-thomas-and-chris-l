@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  get '/' => 'post#index'
-  root 'post#index'
-
-  # get '/posts' => 'post#index'
-  get '/post/new' => 'post#new'
-  get '/post/:id' => 'post#show'
- 
-  
+  get '/post/new' => 'post#new', as: 'new_post'
+  get '/posts' => 'post#index', as: 'posts'
+  get '/post/:id' => 'post#show', as: 'post'
+  post '/posts' => 'post#create'
+  delete '/posts/:id' => 'post#destroy', as: 'delete_post'
+  root 'post#index'  
 end
